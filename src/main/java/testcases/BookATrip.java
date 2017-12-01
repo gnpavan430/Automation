@@ -10,6 +10,7 @@ public class BookATrip extends Setup {
     public void bookATripFlow() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
         homePage.book().click();
+        Thread.sleep(4000);
         driver.findElement(By.xpath("//*[@text='Destination']")).click();
         driver.findElement(By.xpath("//*[@placeholder='where to?']")).click();
         driver.getKeyboard().sendKeys("bcn");
