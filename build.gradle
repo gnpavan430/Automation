@@ -1,0 +1,28 @@
+group 'GoogleSheet'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven { url "https://cloud.experitest.com/repo" }
+    maven { url "http://repo.maven.apache.org/maven2" }
+
+    mavenCentral()
+
+
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.testng/testng
+
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'com.google.api-client:google-api-client:1.23.0'
+    compile 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
+    compile 'com.google.apis:google-api-services-sheets:v4-rev492-1.23.0'
+    compile group: 'com.experitest', name: 'appium', version:'4.1.2'
+
+}
